@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nodebin</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</head>
+<body onload="init();">
+	<div class="navbar navbar-nav">
+		<div class="navbar-brand">
+			<img src="assets/img/NodeJS.png" width="46px">
+			<span class="navbar-text">Nodebin</span>
+		</div>
+
+		<ul class="navigation-items">
+			<li class="nav-item"><a href="javascript:void(0);" onclick="goHome();" class="nav-link">Home</a></li>
+			<li class="nav-item"><a href="javascript:void(0);" onclick="about();" class="nav-link">About it</a></li>
+			<li class="nav-item"><a href="https://paypal.me/sammwy" class="nav-link">Donate</a></li>
+			<li class="nav-item"><a href="https://github.com/sammwyy/nodebin" class="nav-link">Github</a></li>
+			<li class="nav-item"><a href="https://twitter.com/sammwy_" class="nav-link">Twitter</a></li>
+			<li class="nav-item"><a href="https://github.com/sammwyy/nodebin" class="nav-link">Pro version</a></li>
+			<li class="nav-item"><a href="https://sammwy.xyz" class="nav-link">Website</a></li>
+		</ul>
+	</div>
+
+	<div class="container" id="web-content">
+		<div id="new-entry-form" style="display: none;">
+			<div class="form">
+				<div class="form-field">
+					<h3>Title</h3>
+					<input type="text" name="title" id="title" class="input-field">
+				</div>
+
+				<div class="form-field">
+					<h3>Description</h3>
+					<input type="text" name="description" id="description" class="input-field">
+				</div>
+
+				<div class="form-field">
+					<h3>Content</h3>
+					<textarea type="text" name="content" id="content" class="input-field" rows="10"></textarea>
+				</div>
+
+				<div class="form-field">
+					<button class="btn btn-primary" onclick="sendNewEntry();">Save</button>
+				</div>
+			</div>
+		</div>
+
+		<div id="read-entry" style="display: none;">
+			<div class="entry-information">
+				<h3 id="entry-title"></h3>
+				<b id="entry-description"></b> <br/>
+				<!--
+				<button class="btn btn-sm btn-info" onclick="sendNewEntry();">Share on Twitter</button>
+				<button class="btn btn-sm btn-primary" onclick="sendNewEntry();">Share on Facebook</button>
+				<button class="btn btn-primary btn-sm btn-secondary" onclick="sendNewEntry();">Copy</button>
+			-->
+			</div>
+			
+			<div class="entry-body">
+				<p id="entry-content"></p>
+			</div>
+
+			<!--
+			<div class="entry-raw">
+				<span>Raw:</span>
+				<textarea type="text" name="content" id="entry-content-raw" class="input-field" rows="10"></textarea>
+			</div> -->
+		</div>
+
+		<div id="about" style="display: none;">
+			<h1>About</h1>
+			<p>Nodebin is a open-source bin system like ghostbin, pastebin and another paste text service on the internet</p>
+
+			<h3>Used on this project:</h3>
+			<p><img src="assets/img/Bootstrap.png" width="30px"> Bootstrap (4.1.3)</p>
+			<p><img src="assets/img/jQuery.png" width="30px"> jQuery (3.4.1)</p>
+			<p><img src="assets/img/Mongodb.png" width="30px"> MongoDB (4.2)</p>
+			<p><img src="assets/img/NodeJS.png" width="30px"> Nodejs (10.13.0)</p>
+			<p><img src="assets/img/Typescript.png" width="30px"> Typescript (3.6.3)</p>
+		</div>
+
+		<!-- Modal -->
+		 <div class="modal fade" id="error-modal" role="dialog">
+		   <div class="modal-dialog modal-lg">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		        	<h4 class="modal-title">Error</h4>
+		          	<button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        <div class="modal-body">
+		          	<p id="error-message"></p>
+		        </div>
+		        <div class="modal-footer">
+		          	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		      </div>
+		   </div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="assets/js/entry-reader.js"></script>
+	<script type="text/javascript" src="assets/js/entry-writter.js"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>

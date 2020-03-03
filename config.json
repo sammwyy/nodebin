@@ -1,0 +1,7 @@
+{
+	"defaultPort": 80,
+
+	"maxTitleCharacters": 70,
+	"maxDescriptionCharacters": 100,
+	"maxContentCharacters": 5000
+}

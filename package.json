@@ -1,0 +1,8 @@
+{
+  "name": "nodebin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Sammwy <sammwy.dev@gmail.com>",
+  "license": "ISC"
+}

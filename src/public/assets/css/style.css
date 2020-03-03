@@ -1,0 +1,65 @@
+/* Navbar */
+.navbar {
+	background-color: #223;
+}
+
+.navbar-text {
+	color: white;
+}
+
+.navigation-items {
+	display: inline-flex;
+}
+
+.nav-link {
+	color: white;
+	font-size: 20px;
+	margin: 0 20px;
+}
+
+.nav-link:hover {
+	color: lightgreen;
+}
+
+/* Container */
+.container {
+	padding-top: 40px;
+}
+
+/* Add entry form */
+.form {
+	margin: auto;
+	width: 70%;
+}
+
+.form-field {
+	margin-bottom: 40px;
+}
+
+.input-field {
+	width: 100%;
+}
+
+/* Entry Details */
+.entry-information, .entry-body {
+	padding-bottom: 20px;
+}
+
+.entry-body, .entry-information {
+	background-color: #ddd;
+	border-radius: 30px;
+}
+
+.entry-information {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.entry-raw {
+	padding-top: 30px;
+}
+
+#entry-content {
+	padding-top: 10px;
+	margin: 20px;
+}
